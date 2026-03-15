@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chez Marie – Crêperie & Restaurant | Île de Ré</title>
+    <meta name="description"
+        content="Crêperie Chez Marie à Saint-Clément-des-Baleines, Île de Ré. Cuisine traditionnelle, crêpes maison, fruits de mer et terrasse face à l'océan. Tél : 05 46 29 21 83.">
+    <meta property="og:title" content="Chez Marie – Crêperie & Restaurant | Île de Ré">
+    <meta property="og:description" content="Une escale gourmande face au Phare des Baleines à l'Île de Ré.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <header id="header">
+        <a href="#" class="brand" aria-label="Chez Marie - Accueil">
+            <div class="brand-logo">
+                <svg viewBox="0 0 44 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <!-- Light rays -->
+                    <line x1="22" y1="12" x2="3" y2="5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                        opacity="0.35" />
+                    <line x1="22" y1="12" x2="1" y2="15" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                        opacity="0.22" />
+                    <line x1="22" y1="12" x2="41" y2="5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                        opacity="0.35" />
+                    <line x1="22" y1="12" x2="43" y2="15" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                        opacity="0.22" />
+                    <!-- Roof cap -->
+                    <polygon points="22,1 30,9 14,9" fill="currentColor" />
+                    <!-- Lantern room -->
+                    <rect x="15" y="9" width="14" height="8" rx="1" fill="currentColor" opacity="0.75" />
+                    <!-- Light lens -->
+                    <circle cx="22" cy="13" r="2.8" fill="currentColor" opacity="0.35" />
+                    <!-- Gallery railing -->
+                    <rect x="12" y="17" width="20" height="2.5" rx="1" fill="currentColor" />
+                    <!-- Tower body (tapered) -->
+                    <path d="M13 19.5 L16 44 L28 44 L31 19.5 Z" fill="currentColor" opacity="0.88" />
+                    <!-- Decorative band -->
+                    <rect x="14.5" y="35" width="15" height="3" fill="currentColor" opacity="0.25" />
+                    <!-- Base -->
+                    <rect x="12" y="44" width="20" height="5" rx="1.5" fill="currentColor" />
+                    <!-- Wave -->
+                    <path d="M5 52 Q10 49.5 15 52 Q20 54.5 25 52 Q30 49.5 35 52 Q38 53.5 40 52" stroke="currentColor"
+                        stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.45" />
+                    <path d="M8 56 Q13 53.8 18 56 Q23 58.2 28 56 Q33 53.8 37 56" stroke="currentColor"
+                        stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.25" />
+                </svg>
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">Chez Marie</span>
+                <span class="brand-loc">Île de Ré</span>
+            </div>
+        </a>
+
+        <nav id="nav-desktop" aria-label="Navigation principale">
+            <a href="#esprit">L'Esprit</a>
+            <a href="#carte">La Carte</a>
+            <a href="#cadre">Le Cadre</a>
+            <a href="#infos">Infos & Accès</a>
+        </nav>
+
+        <div class="header-right">
+            <a href="tel:+33546292183" class="btn-reserve" id="btn-reserve-header">
+                <span>Réserver</span>
+            </a>
+            <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== MOBILE MENU ===== -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <button class="mobile-close" id="mobile-close" aria-label="Fermer le menu">✕</button>
+        <nav aria-label="Navigation mobile">
+            <a href="#esprit" class="mobile-link">L'Esprit</a>
+            <a href="#carte" class="mobile-link">La Carte</a>
+            <a href="#cadre" class="mobile-link">Le Cadre</a>
+            <a href="#infos" class="mobile-link">Infos & Accès</a>
+        </nav>
+        <div class="mobile-contact">
+            <a href="tel:+33546292183">05 46 29 21 83</a>
+            <p>25 Chemin du Pas du Nord<br>17590 Saint-Clément-des-Baleines</p>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <main>
+
+        <!-- ===== HERO ===== -->
+        <section class="hero">
+            <div class="hero-bg" style="background-image: url('assets/hero.jpg')"></div>
+            <div class="hero-content">
+                <p class="hero-pre reveal">Saint-Clément-des-Baleines · Île de Ré</p>
+                <h1 class="hero-title reveal">Chez Marie</h1>
+                <p class="hero-sub reveal">Crêperie & Restaurant face au Phare des Baleines</p>
+                <div class="hero-actions reveal">
+                    <a href="#carte" class="btn-primary">Découvrir la carte</a>
+                    <a href="#infos" class="btn-secondary">Nous trouver</a>
+                </div>
+            </div>
+            <div class="hero-scroll">
+                <span></span>
+            </div>
+        </section>
+
+
+        <!-- ===== L'ESPRIT ===== -->
+        <section class="esprit" id="esprit">
+            <div class="esprit-image reveal">
+                <img src="assets/terrace.png" alt="Terrasse du restaurant Chez Marie avec vue sur les environs"
+                    loading="lazy">
+            </div>
+            <div class="esprit-content">
+                <span class="label reveal">Depuis toujours</span>
+                <h2 class="reveal">Une adresse incontournable<br>de l'Île de Ré</h2>
+                <p class="reveal">Au cœur de Saint-Clément-des-Baleines, à quelques pas du célèbre Phare des Baleines,
+                    la crêperie Chez Marie est un havre de saveurs authentiques. Entre tradition et générosité, notre
+                    cuisine conjugue le meilleur de la mer et de la terre.</p>
+                <p class="reveal">Que vous soyez vacanciers ou rétais de cœur, venez vous attabler sur notre grande
+                    terrasse et laisser-vous porter par les effluves iodées de l'Atlantique.</p>
+                <a href="#carte" class="btn-primary reveal">Voir la carte</a>
+            </div>
+        </section>
+
+        <!-- ===== LA CARTE ===== -->
+        <section class="carte" id="carte">
+            <div class="section-header">
+                <span class="label reveal">Nos spécialités</span>
+                <h2 class="reveal">La Carte</h2>
+                <p class="reveal">Une cuisine sincère, préparée avec amour et des produits du terroir rétais.</p>
+            </div>
+
+            <div class="menu-tabs reveal">
+                <button class="tab active" data-tab="starters" aria-selected="true">Entrées & Mer</button>
+                <button class="tab" data-tab="mains" aria-selected="false">Plats</button>
+                <button class="tab" data-tab="galettes" aria-selected="false">Galettes</button>
+                <button class="tab" data-tab="crepes" aria-selected="false">Crêpes Sucrées</button>
+            </div>
+
+            <div class="menu-panels">
+
+                <!-- ENTRÉES -->
+                <div class="menu-panel active" id="starters">
+                    <div class="menu-grid">
+                        <div class="menu-photo reveal">
+                            <img src="assets/huitre.jpg" alt="Fruits de mer frais" loading="lazy">
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-item reveal">
+                                <div class="mi-head">
+                                    <h3>Huîtres de l'Île de Ré</h3><span>9,70€ / 17,90€</span>
+                                </div>
+                                <p>La douzaine ou la demi-douzaine, servies avec pain de seigle et beurre salé.</p>
+                            </div>
+                            <div class="menu-item reveal">
+                                <div class="mi-head">
+                                    <h3>Assiette de tapas</h3><span>10,50€</span>
+                                </div>
+                                <p>Chorizo, fromage de chèvre, tapenade et charcuterie locale.</p>
+                            </div>
+                            <div class="menu-item reveal">
+                                <div class="mi-head">
+                                    <h3>Beignets de calamars</h3><span>9,00€</span>
+                                </div>
+                                <p>Panés maison, servis avec une sauce aïoli au citron.</p>
+                            </div>
+                            <div class="menu-item reveal">
+                                <div class="mi-head">
+                                    <h3>Assiette de charcuterie</h3><span>11,50€</span>
+                                </div>
+                                <p>Sélection de charcuteries artisanales et cornichons.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PLATS -->
+                <div class="menu-panel" id="mains">
+                    <div class="menu-grid">
+                        <div class="menu-photo reveal">
+                            <img src="assets/seafood.jpg" alt="Moules marinières" loading="lazy">
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-item reveal">
+                                <div class="mi-head">
+                                    <h3>Moules marinières</h3><span>à partir de 9,00€</span>
+                                </div>
+                                <p>Moules de bouchot, servies avec frites maison (jusqu'à 16,90€).</p>
+                            </div>
+                            <div class="menu-item reveal">
+                                <div class="mi-head">
+                                    <h3>Poisson du jour</h3><span>Selon arrivage</span>
+                                </div>
+                                <p>Filet de poisson frais de l'Atlantique, légumes de saison.</p>
+                            </div>
+                            <div class="menu-item reveal">
+                                <div class="mi-head">
+                                    <h3>Menu du jour</h3><span>14,90€ / 22,00€</span>
+                                </div>
+                                <p>Entrée + Plat + Dessert. Composition variable selon les saisons.</p>
+                            </div>
+                            <div class="menu-item reveal">
+                                <div class="mi-head">
+                                    <h3>Menu Enfant</h3><span>8,90€</span>
+                                </div>
+                                <p>Plat adapté + dessert pour les petits aventuriers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GALETTES -->
+                <div class="menu-panel" id="galettes">
+                    <div class="menu-grid">
+                        <div class="menu-photo reveal">
+                            <img src="assets/gal.jpg" alt="Galette bretonne" loading="lazy">
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-item reveal">
+                                <div class="mi-head">
+                                    <h3>Galette Complète</h3><span>11,50€</span>
+                                </div>
+                                <p>Oeuf miroir, jambon supérieur, emmental fondu.</p>
+                            </div>
+                            <div class="menu-item reveal">
+                                <div class="mi-head">
+                                    <h3>Galette Rétaise</h3><span>12,50€</span>
+                                </div>
+                                <p>Fromage de chèvre frais, miel de l'île, noix et roquette.</p>
+                            </div>
+                            <div class="menu-item reveal">
+                                <div class="mi-head">
+                                    <h3>Galette Océane</h3><span>13,90€</span>
+                                </div>
+                                <p>Saumon fumé, crème fraîche, câpres et aneth.</p>
+                            </div>
+                            <div class="menu-item reveal">
+                                <div class="mi-head">
+                                    <h3>Formule Galette</h3><span>12,50€</span>
+                                </div>
+                                <p>1 galette + 1 bolée de cidre + 1 crêpe sucrée au choix.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CRÊPES -->
+                <div class="menu-panel" id="crepes">
+                    <div class="menu-grid">
+                        <div class="menu-photo reveal">
+                            <img src="assets/crepe.jpg" alt="Crêpes sucrées" loading="lazy">
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-item reveal">
+                                <div class="mi-head">
+                                    <h3>Crêpe Beurre Sucre</h3><span>4,00€</span>
+                                </div>
+                                <p>La classique, avec beurre demi-sel de l'île et sucre cristal.</p>
+                            </div>
+                            <div class="menu-item reveal">
+                                <div class="mi-head">
+                                    <h3>Crêpe Caramel</h3><span>6,50€</span>
+                                </div>
+                                <p>Caramel au beurre salé maison et éclats de noisette grillée.</p>
+                            </div>
+                            <div class="menu-item reveal">
+                                <div class="mi-head">
+                                    <h3>Crêpe Chocolat-Noisette</h3><span>6,00€</span>
+                                </div>
+                                <p>Pâte à tartiner artisanale et amandes effilées torréfiées.</p>
+                            </div>
+                            <div class="menu-item reveal">
+                                <div class="mi-head">
+                                    <h3>Crêpe Flambée</h3><span>8,50€</span>
+                                </div>
+                                <p>Grand Marnier, zeste d'orange et sucre brûlé.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== LE CADRE ===== -->
+        <section class="cadre" id="cadre">
+            <div class="cadre-text">
+                <span class="label reveal">Notre cadre</span>
+                <h2 class="reveal">Au bout de l'île,<br>face au Phare</h2>
+                <p class="reveal">Reconnaissable à sa façade blanche et ses volets verts, Chez Marie est une adresse
+                    emblématique de Saint-Clément-des-Baleines. À quelques pas du Phare des Baleines — 57 mètres, 257
+                    marches, classé monument historique depuis 2012 — notre établissement vous accueille dans une
+                    ambiance chaleureuse, du petit-déjeuner jusqu'au dîner.</p>
+                <div class="cadre-features reveal">
+                    <div class="cf"><span>🌞</span>Grande terrasse extérieure</div>
+                    <div class="cf"><span>☕</span>Ouvert dès 9h (petits-déj.)</div>
+                    <div class="cf"><span>🚲</span>À 2 min du Phare des Baleines</div>
+                    <div class="cf"><span>🐶</span>Animaux bienvenus</div>
+                </div>
+            </div>
+            <div class="cadre-image reveal">
+                <img src="assets/end.jpg" alt="Vue depuis la terrasse de Chez Marie, Île de Ré" loading="lazy">
+            </div>
+        </section>
+
+        <!-- ===== INFOS ===== -->
+        <section class="infos" id="infos">
+            <div class="infos-grid">
+                <div class="info-card reveal">
+                    <div class="info-icon">📍</div>
+                    <h3>Adresse</h3>
+                    <p>25 Chemin du Pas du Nord<br>17590 Saint-Clément-des-Baleines<br>Île de Ré</p>
+                    <a href="https://maps.google.com/?q=Chez+Marie+Saint-Clément-des-Baleines" target="_blank"
+                        rel="noopener" class="info-link">Voir sur Google Maps →</a>
+                </div>
+                <div class="info-card reveal">
+                    <div class="info-icon">🕐</div>
+                    <h3>Horaires</h3>
+                    <p>Ouvert <strong>tous les jours</strong></p>
+                    <p>Haute saison : <strong>9h00 – 22h00</strong></p>
+                    <p>Basse saison : <strong>9h00 – 18h00</strong></p>
+                    <p class="info-note">Fermé de novembre à février · Horaires variables selon la saison</p>
+                </div>
+                <div class="info-card reveal">
+                    <div class="info-icon">📞</div>
+                    <h3>Contact</h3>
+                    <p>Pour une réservation ou toute information :</p>
+                    <a href="tel:+33546292183" class="info-phone">05 46 29 21 83</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-brand">
+            <span class="brand-name-footer">Chez Marie</span>
+            <span>Crêperie & Restaurant · Île de Ré</span>
+        </div>
+        <div class="footer-links">
+            <a href="#esprit">L'Esprit</a>
+            <a href="#carte">La Carte</a>
+            <a href="#cadre">Le Cadre</a>
+            <a href="#infos">Infos & Accès</a>
+        </div>
+        <div class="footer-legal">
+            <p>25 Chemin du Pas du Nord · 17590 Saint-Clément-des-Baleines</p>
+            <p>&copy; 2026 Chez Marie — Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <!-- Floating reserve button for mobile -->
+    <a href="tel:+33546292183" class="fab-reserve" aria-label="Appeler pour réserver">
+        Réserver
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
